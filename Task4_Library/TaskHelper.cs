@@ -53,5 +53,17 @@
 
             return sum;
         }
+
+        public static int[] Reverse(int[] array)
+        {
+            int[] reverseArray = new int[array.Length];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                reverseArray[i] = array[array.Length - 1 - i];
+            }
+
+            return reverseArray;
+        }
     }
 }
