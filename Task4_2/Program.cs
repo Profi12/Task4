@@ -1,7 +1,7 @@
 ﻿using System;
 using Task4_Library;
 
-namespace Task4_1
+namespace Task4_2
 {
     class Program
     {
@@ -19,7 +19,7 @@ namespace Task4_1
 
             Console.WriteLine();
 
-            Console.WriteLine(TaskHelper.Min(array));
+            Console.WriteLine(TaskHelper.Max(array));
         }
     }
 }

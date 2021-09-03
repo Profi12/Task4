@@ -2,19 +2,56 @@
 {
     public class TaskHelper
     {
-        public static int Task4_1(int[] array) 
+        public static int Min(int[] array) 
         {
-            int min = array[0];
+            return array[MinIndex(array)];
+        }
+
+        public static int Max(int[] array)
+        {
+            return array[MaxIndex(array)];
+        }
+
+        public static int MinIndex(int[] array)
+        {
+            int minIndex = 0;
 
             for (int i = 1; i < array.Length; i++)
             {
-                if (min > array[i])
+                if (array[minIndex] > array[i])
                 {
-                    min = array[i];
+                    minIndex = i;
                 }
             }
 
-            return min;
+            return minIndex;
+        }
+
+        public static int MaxIndex(int[] array)
+        {
+            int maxIndex = 0;
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[maxIndex] < array[i])
+                {
+                    maxIndex = i;
+                }
+            }
+
+            return maxIndex;
+        }
+
+        public static int SumByOddIndexes(int[] array)
+        {
+            int sum = 0;
+
+            for (int i = 1; i < array.Length; i += 2)
+            {
+                sum += array[i];
+            }
+
+            return sum;
         }
     }
 }
