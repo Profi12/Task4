@@ -1,14 +1,25 @@
-﻿namespace Task4_Library
+﻿using System;
+
+namespace Task4_Library
 {
     public class TaskHelper
     {
-        public static int Min(int[] array) 
+        public static int Min(int[] array)
         {
+            if (array == null || array.Length == 0)
+            {
+                throw new ArgumentException();
+            }
+
             return array[MinIndex(array)];
         }
 
         public static int Max(int[] array)
         {
+            if (array == null || array.Length == 0)
+            {
+                throw new ArgumentException();
+            }
             return array[MaxIndex(array)];
         }
 
@@ -16,6 +27,10 @@
         {
             int minIndex = 0;
 
+            if (array == null || array.Length == 0)
+            {
+                throw new ArgumentException();
+            }
             for (int i = 1; i < array.Length; i++)
             {
                 if (array[minIndex] > array[i])
@@ -31,6 +46,10 @@
         {
             int maxIndex = 0;
 
+            if (array == null || array.Length == 0)
+            {
+                throw new ArgumentException();
+            }
             for (int i = 1; i < array.Length; i++)
             {
                 if (array[maxIndex] < array[i])
